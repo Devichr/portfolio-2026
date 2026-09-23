@@ -13,7 +13,10 @@ export default function Profile() {
       <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_280px]">
         <div>
           <Reveal delay={0.05}>
-            <p className="max-w-2xl text-lg leading-relaxed text-obsidian/80">
+            <h2 className="font-display text-3xl font-semibold tracking-tight text-obsidian sm:text-4xl">
+              Hi, I am {profile.name}
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-obsidian/80">
               {profile.processLine}
             </p>
           </Reveal>
