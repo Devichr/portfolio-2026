@@ -40,11 +40,11 @@ describe("flagship projects", () => {
     };
     for (const name of ["janova", "fas-track", "smart-halter"]) {
       const p = getProject(name);
-      expect(p?.image).toMatch(/\.png$/);
+      expect(p?.image).toMatch(/\.webp$/);
       expect(p?.image).toContain(`assets/${folder[name]}`);
       expect(p?.screenshots?.length).toBe(5);
       for (const shot of p?.screenshots ?? []) {
-        expect(shot).toMatch(/\.png$/);
+        expect(shot).toMatch(/\.webp$/);
         expect(shot).toContain(`assets/${folder[name]}`);
       }
     }

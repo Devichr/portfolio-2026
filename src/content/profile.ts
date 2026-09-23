@@ -1,6 +1,6 @@
 import type { HighlightSkill, ProfileContent, SkillGroup } from "./types";
-import halfBody from "@assets/deviano/half-body.png";
-import headshot from "@assets/deviano/headshot.png";
+import halfBody from "@assets/deviano/half-body.webp";
+import headshot from "@assets/deviano/headshot.webp";
 
 const toSrc = (img: string | { src: string }): string =>
   typeof img === "string" ? img : img.src;
