@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FAF7F0;
+  --color-obsidian: #1B2436;
+  --color-terracotta: #C15A32;
+  --color-sage: #8A9A5B;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+:root {
+  --color-ivory: #FAF7F0;
+  --color-obsidian: #1B2436;
+  --color-terracotta: #C15A32;
+  --color-sage: #8A9A5B;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-obsidian);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.snap-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+::selection {
+  background-color: var(--color-terracotta);
+  color: var(--color-ivory);
+}
+
+/* Print styles fall back to ink on paper */
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.page-break {
+  break-inside: avoid;
+}
+
+.print-page {
+  background: #fff;
+}
+
+@page {
+  margin: 0;
+}
+
+@page deck {
+  size: 320mm 180mm;
+  margin: 0;
+}
+
+.deck-slide {
+  page: deck;
+  break-after: page;
+  display: flex;
+  flex-direction: column;
+  height: 180mm;
+  width: 320mm;
+  padding: 12mm;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #fff;
+}
+
+.deck-slide:last-child {
+  break-after: auto;
+}
