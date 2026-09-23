@@ -43,4 +43,7 @@ export const baseMetadata = {
     title: `${siteName} — ${role}`,
     description: "I build software you can actually feel.",
   },
+  verification: {
+    google: "Q6daFmoRXAGkm-l5wW2-ZrF-SyZwjo-a0u46W3xTV4A",
+  },
 } satisfies Metadata;
